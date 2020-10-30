@@ -2,65 +2,97 @@
   {
     "id": "5f99e93036140b74fc35c3b6",
     "description": "Short Product Description 1",
-    "title": "green",
-    "price": "$2,315.28",
-    "picture": "http://placehold.it/32x32",
+    "title": "Unicorn",
+    "price": 14.99,
+    "picture": "https://unsplash.com/photos/opkaRk20tAw",
     "count": 6
   },
   {
     "id": "5f99e930c9b29b7b40de4b28",
-    "description": "Short Product Description 2",
-    "title": "brown",
-    "price": "$1,121.04",
-    "picture": "http://placehold.it/32x32",
+    "description": "Hello, i'm Nick",
+    "title": "Nick",
+    "price": 9.99,
+    "picture": "https://unsplash.com/photos/2bVe_GVW7rw",
     "count": 8
   },
   {
     "id": "5f99e93064272b83b1dcb0e7",
-    "description": "Short Product Description 3",
-    "title": "brown",
-    "price": "$3,615.80",
-    "picture": "http://placehold.it/32x32",
+    "description": "Just a chicken guy",
+    "title": "Chicken",
+    "price": 5.99,
+    "picture": "https://unsplash.com/photos/OOJAUol19oo",
     "count": 1
   },
   {
     "id": "5f99e9308237bb29087a8b23",
     "description": "Short Product Description 4",
-    "title": "brown",
-    "price": "$3,744.30",
-    "picture": "http://placehold.it/32x32",
-    "count": 5
+    "title": "Stormtrooper",
+    "price": 999,
+    "picture": "https://unsplash.com/photos/F3E5Bkq0JUY",
+    "count": 1
   },
   {
     "id": "5f99e9305ff0c6935704832d",
     "description": "Short Product Description 5",
-    "title": "brown",
-    "price": "$3,613.86",
-    "picture": "http://placehold.it/32x32",
+    "title": "Red brick guy",
+    "price": 49.99,
+    "picture": "https://unsplash.com/photos/qaKG2zozPYE",
     "count": 4
   },
   {
     "id": "5f99e9303dea61bf616f1a8d",
     "description": "Short Product Description 6",
-    "title": "brown",
-    "price": "$1,814.33",
-    "picture": "http://placehold.it/32x32",
-    "count": 6
+    "title": "Freddy",
+    "price": 89,
+    "picture": "https://unsplash.com/photos/6TWKpVmg-jQ",
+    "count": 16
   },
   {
     "id": "5f99e9309c4cc7ecee218f6d",
     "description": "Short Product Description 7",
-    "title": "blue",
-    "price": "$1,445.48",
-    "picture": "http://placehold.it/32x32",
-    "count": 1
+    "title": "Archeologist",
+    "price": 149,
+    "picture": "https://unsplash.com/photos/g6YO_FyafLc",
+    "count": 2
   },
   {
     "id": "5f99e930357fbc609a40fbbe",
     "description": "Short Product Description 8",
-    "title": "blue",
-    "price": "$1,863.80",
-    "picture": "http://placehold.it/32x32",
-    "count": 8
+    "title": "Yoda",
+    "price": 599,
+    "picture": "https://unsplash.com/photos/XHXOafBIOhc",
+    "count": 12
+  },
+  {
+    "id": "5f99e9309c4cc7ecee218f6d",
+    "description": "Short Product Description 9",
+    "title": "Harry Potter",
+    "price": 9.99,
+    "picture": "https://unsplash.com/photos/kuEJKRto2NE",
+    "count": 10
+  },
+  {
+    "id": "5f99e9334345fbc609a40fbbe",
+    "description": "Short Product Description 10",
+    "title": "BANG!",
+    "price": 99,
+    "picture": "https://unsplash.com/photos/8yCmQODY2SY",
+    "count": 50
+  },
+  {
+    "id": "5f99e9309c4cc7e565765e218f6d",
+    "description": "Short Product Description 11",
+    "title": "Astronaut",
+    "price": 199,
+    "picture": "https://unsplash.com/photos/J_oMW9wbkKo",
+    "count": 14
+  },
+  {
+    "id": "5f99e930357456564609a40fbbe",
+    "description": "Short Product Description 12",
+    "title": "Batman",
+    "price": 299,
+    "picture": "https://unsplash.com/photos/demvKRNvtLY",
+    "count": 1
   }
 ]
