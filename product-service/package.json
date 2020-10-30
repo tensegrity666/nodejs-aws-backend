@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Serverless webpack example using ecma script",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "sls deploy"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",

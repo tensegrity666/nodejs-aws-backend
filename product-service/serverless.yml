@@ -16,9 +16,9 @@ provider:
 
 functions:
   products:
-    handler: handlers/app.getProducts
+    handler: handlers/get-products.getProducts
     events:
       - http:
-          method: get
           path: product
+          method: get
           cors: true
