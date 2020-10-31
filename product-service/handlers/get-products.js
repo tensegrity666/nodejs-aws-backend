@@ -1,7 +1,7 @@
-import productsMock from "../mocks/productsMock.json";
+import productsMock from "../mocks/productsMock";
 
-const getProducts = async (event, context) => {
-  const response = {
+const getProductsList = async (event, context) => {
+  return {
     statusCode: 200,
     headers: {
       "Access-Control-Allow-Origin": "*",
@@ -9,8 +9,6 @@ const getProducts = async (event, context) => {
     },
     body: JSON.stringify(productsMock, null, 2),
   };
-
-  return response;
 };
 
-export { getProducts };
+export { getProductsList };
