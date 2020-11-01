@@ -14,14 +14,14 @@ provider:
 
 functions:
   getProductsList:
-    handler: handlers/get-products.getProductsList
+    handler: handlers/products.getProductsList
     events:
       - http:
           path: product
           method: get
           cors: true
   getProductById:
-    handler: handlers/get-by-id.getProductById
+    handler: handlers/id.getProductById
     events:
       - http:
           path: product/{id}

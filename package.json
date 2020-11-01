@@ -1,0 +1,25 @@
+{
+  "name": "nodejs-aws-be",
+  "version": "0.0.1",
+  "description": "Rolling Scopes School - NodeJS in AWS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tensegrity666/nodejs-aws-backend.git"
+  },
+  "keywords": [
+    "nodeJS",
+    "AWS",
+    "CloudFormation",
+    "AWS-Lambda"
+  ],
+  "author": "Roman Yakovlev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tensegrity666/nodejs-aws-backend/issues"
+  },
+  "homepage": "https://github.com/tensegrity666/nodejs-aws-backend#readme"
+}
