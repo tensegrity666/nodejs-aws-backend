@@ -8,7 +8,7 @@ const getProductById = async (event, context) => {
 
     console.log(product)
 
-    if (product.id === undefined) {
+    if (product.length === 0) {
       return {
         statusCode: 404,
         body: "Product not found",
