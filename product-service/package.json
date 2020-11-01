@@ -2,6 +2,7 @@
   "name": "product-service",
   "version": "1.0.0",
   "scripts": {
+    "test": "jest",
     "deploy": "sls deploy"
   },
   "devDependencies": {
@@ -11,6 +12,7 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.6.0",
+    "jest": "^26.6.1",
     "serverless-webpack": "^5.3.1",
     "webpack": "^4.35.2"
   },
