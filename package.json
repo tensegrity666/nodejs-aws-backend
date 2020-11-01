@@ -2,9 +2,9 @@
   "name": "nodejs-aws-be",
   "version": "0.0.1",
   "description": "Rolling Scopes School - NodeJS in AWS",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,11 @@
   "bugs": {
     "url": "https://github.com/tensegrity666/nodejs-aws-backend/issues"
   },
-  "homepage": "https://github.com/tensegrity666/nodejs-aws-backend#readme"
+  "homepage": "https://github.com/tensegrity666/nodejs-aws-backend#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6",
+    "swagger-ui-express": "^4.1.4",
+    "yamljs": "^0.3.0"
+  }
 }
