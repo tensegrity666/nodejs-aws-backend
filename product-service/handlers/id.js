@@ -5,8 +5,6 @@ const getProductById = async (event, context) => {
     (element) => element.id === event.pathParameters.id
   );
 
-  console.log(event.pathParameters.id);
-
   return {
     statusCode: 200,
     headers: {
