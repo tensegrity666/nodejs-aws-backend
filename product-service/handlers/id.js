@@ -6,6 +6,15 @@ const getProductById = async (event, context) => {
       (element) => element.id === event.pathParameters.id
     );
 
+    console.log(product)
+
+    if (product.id === undefined) {
+      return {
+        statusCode: 404,
+        body: "Product not found",
+      };
+    }
+
     return {
       statusCode: 200,
       headers: {
@@ -17,7 +26,7 @@ const getProductById = async (event, context) => {
   } catch (error) {
     return {
       statusCode: 500,
-      body: "Error",
+      body: "Server Error",
     };
   }
 };

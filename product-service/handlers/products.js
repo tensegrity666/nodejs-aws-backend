@@ -12,8 +12,8 @@ const getProductsList = async (event, context) => {
     };
   } catch (error) {
     return {
-      statusCode: 500,
-      body: "Error",
+      statusCode: 404,
+      body: "Product not found",
     };
   }
 };
