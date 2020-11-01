@@ -21,7 +21,7 @@ const getProductById = async (event, context) => {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Credentials": true,
       },
-      body: JSON.stringify(product, null, 2),
+      body: JSON.stringify(product[0], null, 2),
     };
   } catch (error) {
     return {
