@@ -8,7 +8,7 @@ const getProductsList = async (event, context) => {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Credentials": true,
       },
-      body: JSON.stringify(productsMock[0], null, 2),
+      body: JSON.stringify(productsMock, null, 2),
     };
   } catch (error) {
     return {
@@ -18,4 +18,4 @@ const getProductsList = async (event, context) => {
   }
 };
 
-export { getProductsList };
+export default getProductsList;

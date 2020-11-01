@@ -10,7 +10,7 @@ provider:
 
 functions:
   weather:
-    handler: handler.getWeather
+    handler: src/handler.getWeather
     events:
       - http:
           method: get
