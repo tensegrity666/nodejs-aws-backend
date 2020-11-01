@@ -1,11 +1,11 @@
 import fetch from 'node-fetch';
 
-export const getWeather = async (event, context) => {
+const getWeather = async (event, context) => {
   try {
     const API_URL =
       "http://api.openweathermap.org/data/2.5/weather?q=Moscow&appid=17622236e3b5352e5d47b38be02d682f";
 
-    const response = await fetch(API_URLAPI_URL);
+    const response = await fetch(API_URL);
     const data = await response.json();
 
     const { name, weather, sys, main } = data;
@@ -30,3 +30,5 @@ export const getWeather = async (event, context) => {
     };
   }
 };
+
+export { getWeather };
