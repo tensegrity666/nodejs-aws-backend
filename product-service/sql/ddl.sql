@@ -1,12 +1,13 @@
-create table products (
+create table if not exists products (
 	id uuid primary key default uuid_generate_v4(),
-	title text,
-	description text
+	title text not null,
+	description text,
+	price integer
 )
 
-drop table products
-
-create extension if not exists "uuid-ossp"
-
-insert into products (title, description) values
-('Astronaut', 'Short Product Description 1')
+create table if not exists stocks (
+	id uuid primary key default uuid_generate_v4(),
+	list_id uuid,
+	foreign key ("list_id") references "products" ("id"),
+	count integer
+)
