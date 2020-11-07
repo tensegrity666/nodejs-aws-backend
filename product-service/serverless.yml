@@ -21,15 +21,15 @@ provider:
     PG_PASSWORD: ${env:PASSWORD}
 
 functions:
-  getProductsListFromMock:
-    handler: src/handler.getProductsListFromMock
+  getProductsList:
+    handler: src/handler.getProductsList
     events:
       - http:
           path: product
           method: get
           cors: true
-  getProductByIdFromMock:
-    handler: src/handler.getProductByIdFromMock
+  getProductById:
+    handler: src/handler.getProductById
     events:
       - http:
           path: product/{id}

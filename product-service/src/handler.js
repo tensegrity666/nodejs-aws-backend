@@ -1,5 +1,5 @@
-import getProductByIdFromMock from './handlers/id.mock';
-import getProductsListFromMock from './handlers/products.mock';
+import getProductById from './handlers/byId';
+import getProductsList from './handlers/products';
 import createDB from './postgress-handlers';
 
-export { getProductByIdFromMock, getProductsListFromMock, createDB };
+export { getProductById, getProductsList, createDB };
