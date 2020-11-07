@@ -1,6 +1,6 @@
 import productsMock from "../mocks/productsMock";
 
-const getProductsList = async (event, context) => {
+const getProductsListFromMock = async (event, context) => {
   try {
     return {
       statusCode: 200,
@@ -18,4 +18,4 @@ const getProductsList = async (event, context) => {
   }
 };
 
-export default getProductsList;
+export default getProductsListFromMock;

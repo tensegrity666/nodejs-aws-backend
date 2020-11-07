@@ -1,4 +1,5 @@
-import getProductById from './handlers/id';
-import getProductsList from "./handlers/products";
+import getProductByIdFromMock from './handlers/id.mock';
+import getProductsListFromMock from "./handlers/products.mock";
+import invoke from "./handlers/get-by-id-pg";
 
-export { getProductById, getProductsList };
+export { getProductByIdFromMock, getProductsListFromMock, invoke };

@@ -1,6 +1,6 @@
 import products from "../mocks/productsMock";
 
-const getProductById = async (event, context) => {
+const getProductByIdFromMock = async (event, context) => {
   try {
     const product = products.filter(
       (element) => element.id === event.pathParameters.id
@@ -31,4 +31,4 @@ const getProductById = async (event, context) => {
   }
 };
 
-export default getProductById;
+export default getProductByIdFromMock;

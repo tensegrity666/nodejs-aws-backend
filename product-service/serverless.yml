@@ -5,6 +5,7 @@ frameworkVersion: '2'
 
 plugins:
   - serverless-webpack
+  # - serverless-dotenv-plugin
 
 provider:
   name: aws
@@ -12,16 +13,23 @@ provider:
   stage: dev
   region: eu-west-1
 
+environment:
+  PG_HOST: rss-aws-shop.csk96ler9jqa.eu-west-1.rds.amazonaws.com
+  PG_PORT: 5432
+  PG_DATABASE: rss_postgress
+  PG_USERNAME: RssPostgress
+  PG_PASSWORD: iN6Q3pEFvpeK5qR
+
 functions:
-  getProductsList:
-    handler: src/handler.getProductsList
+  getProductsListFromMock:
+    handler: src/handler.getProductsListFromMock
     events:
       - http:
           path: product
           method: get
           cors: true
-  getProductById:
-    handler: src/handler.getProductById
+  getProductByIdFromMock:
+    handler: src/handler.getProductByIdFromMock
     events:
       - http:
           path: product/{id}
@@ -31,3 +39,5 @@ functions:
             parameters:
               paths:
                 id: true
+  invoke:
+    handler: src/handler.invoke
