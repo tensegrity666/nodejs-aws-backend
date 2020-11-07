@@ -39,5 +39,5 @@ functions:
             parameters:
               paths:
                 id: true
-  invoke:
-    handler: src/handler.invoke
+  createDB:
+    handler: src/handler.createDB

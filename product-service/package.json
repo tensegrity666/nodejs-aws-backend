@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "test": "jest",
-    "lint": "eslint ./ --ignore-path .gitignore --fix",
+    "lint": "eslint ./ --quiet --fix",
     "deploy": "npm run lint && sls deploy"
   },
   "devDependencies": {
