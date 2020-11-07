@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "test": "jest",
-    "deploy": "sls deploy"
+    "lint": "eslint ./ --ignore-path .gitignore --fix",
+    "deploy": "npm run lint && sls deploy"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",

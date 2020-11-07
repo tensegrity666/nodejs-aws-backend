@@ -1,19 +1,19 @@
-import productsMock from "../mocks/productsMock";
+import productsMock from '../mocks/productsMock';
 
-const getProductsListFromMock = async (event, context) => {
+const getProductsListFromMock = async () => {
   try {
     return {
       statusCode: 200,
       headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Credentials": true,
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': true,
       },
       body: JSON.stringify(productsMock, null, 2),
     };
   } catch (error) {
     return {
       statusCode: 404,
-      body: "Product not found",
+      body: 'Product not found',
     };
   }
 };
