@@ -42,6 +42,25 @@ paths:
                 items:
                   $ref: "#/components/schemas/Product"
 
+  /product:
+    post:
+      tags:
+        - addProduct
+      summary: Add product
+      description: Create new product item
+      responses:
+        201:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Product"
+        400:
+          description: Bad request
+
+
   /product/{productId}:
     parameters:
       - name: productId
