@@ -1,15 +1,26 @@
 const createTableProducts = `create table if not exists products (
-  id uuid primary key default uuid_generate_v4(),
-  title text not null,
-  description text,
-  price integer
+  "id" uuid default uuid_generate_v4(),
+  "title" text not null,
+  "description" text,
+  "picture" text,
+  "price" integer,
+  primary key ("id")
 )`;
 
 const createTableStocks = `create table if not exists stocks (
-  id uuid primary key default uuid_generate_v4(),
-  list_id uuid,
-  foreign key ("list_id") references "products" ("id"),
-  count integer
+  "id" uuid default uuid_generate_v4(),
+  "list_id" uuid,
+  "count" integer,
+  primary key ("id"),
+  foreign key ("list_id") references products("id")
 )`;
 
-export { createTableStocks, createTableProducts };
+const dropProducts = 'drop table products';
+const dropStocks = 'drop table stocks';
+
+export {
+  createTableStocks,
+  createTableProducts,
+  dropProducts,
+  dropStocks,
+};

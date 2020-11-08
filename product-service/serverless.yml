@@ -21,12 +21,25 @@ provider:
     PG_PASSWORD: ${env:PASSWORD}
 
 functions:
+  createDB:
+    handler: src/handler.createDB
+  initDB:
+    handler: src/handler.initDB
+  dropDB:
+    handler: src/handler.dropDB
   getProductsList:
     handler: src/handler.getProductsList
     events:
       - http:
           path: product
           method: get
+          cors: true
+  addProduct:
+    handler: src/handler.addProduct
+    events:
+      - http:
+          path: product
+          method: post
           cors: true
   getProductById:
     handler: src/handler.getProductById
@@ -39,5 +52,4 @@ functions:
             parameters:
               paths:
                 id: true
-  createDB:
-    handler: src/handler.createDB
+

@@ -1,17 +1,15 @@
 import { Client } from 'pg';
 import config from '../common/pg-config';
 
-const getProductByIdFromMock = async (event) => {
+const getProductById = async (event) => {
   const client = new Client(config);
   await client.connect();
 
   try {
-    const product = await client.query(`select * from products
+    const { rows: product } = await client.query(`select * from products
     where id = ${event.pathParameters.id}`);
 
-    console.log(product);
-
-    if (product === null) {
+    if (product.length === 0) {
       return {
         statusCode: 404,
         body: 'Product not found',
@@ -31,7 +29,9 @@ const getProductByIdFromMock = async (event) => {
       statusCode: 500,
       body: 'Server Error',
     };
+  } finally {
+    client.end();
   }
 };
 
-export default getProductByIdFromMock;
+export default getProductById;

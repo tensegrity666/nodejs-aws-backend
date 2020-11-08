@@ -1,15 +1,20 @@
-/* eslint-disable no-console */
-
 import { Client } from 'pg';
 import config from '../common/pg-config';
 
-const getProductsList = async () => {
+const getProductById = async (event) => {
   const client = new Client(config);
   await client.connect();
 
   try {
-    const { rows } = await client.query('select * from products');
-    console.log(`Products list: ${rows}`);
+    const { rows: product } = await client.query(`select * from products
+    where id = '${event.pathParameters.id}'`);
+
+    if (product.length === 0) {
+      return {
+        statusCode: 404,
+        body: 'Product not found',
+      };
+    }
 
     return {
       statusCode: 200,
@@ -17,11 +22,9 @@ const getProductsList = async () => {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Credentials': true,
       },
-      body: JSON.stringify(rows, null, 2),
+      body: JSON.stringify(product, null, 2),
     };
   } catch (error) {
-    console.log(`Get products list failed: ${error.message}`);
-
     return {
       statusCode: 500,
       body: 'Server Error',
@@ -31,4 +34,4 @@ const getProductsList = async () => {
   }
 };
 
-export default getProductsList;
+export default getProductById;

@@ -1,5 +1,9 @@
-import getProductById from './handlers/byId';
-import getProductsList from './handlers/products';
-import createDB from './postgress-handlers';
+import getProductById from './postgress-handlers/get-by-id';
+import getProductsList from './postgress-handlers/get-all';
+import createDB from './postgress-handlers/create-db';
+import initDB from './postgress-handlers/init-db';
+import dropDB from './postgress-handlers/drop-db';
 
-export { getProductById, getProductsList, createDB };
+export {
+  getProductById, getProductsList, createDB, initDB, dropDB,
+};
