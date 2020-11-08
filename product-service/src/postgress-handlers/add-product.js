@@ -1,30 +1,36 @@
+/* eslint-disable no-console */
+
 import { Client } from 'pg';
 import config from '../common/pg-config';
 
-const getProductById = async (event) => {
+const addProduct = async (event) => {
   const client = new Client(config);
   await client.connect();
 
   try {
-    const { rows: product } = await client.query(`select * from products
-    where id = ${event.pathParameters.id}`);
-
-    if (product.length === 0) {
+    if (event === undefined || event === null) {
       return {
-        statusCode: 404,
-        body: 'Product not found',
+        statusCode: 400,
+        body: 'Event object is empty',
       };
     }
 
+    console.log(JSON.stringify(event, null, 2));
+
+    await client.query(`insert into products ("title", "description", "picture", "price") values
+    ('${event.title}', '${event.description}', '${event.picture}', ${event.price})`);
+
     return {
-      statusCode: 200,
+      statusCode: 201,
       headers: {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Credentials': true,
       },
-      body: JSON.stringify(product, null, 2),
+      body: 'Success',
     };
-  } catch (error) {
+  } catch (err) {
+    console.log(`Operation failed: ${err.message}`);
+
     return {
       statusCode: 500,
       body: 'Server Error',
@@ -34,4 +40,4 @@ const getProductById = async (event) => {
   }
 };
 
-export default getProductById;
+export default addProduct;
