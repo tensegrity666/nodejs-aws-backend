@@ -70,7 +70,7 @@ paths:
           type: string
     get:
       tags:
-        - getProductByIdFromMock
+        - getProductByIdFrom
       summary: Get product by ID
       description: Gets a product by ID
         e.g. “/product/123”

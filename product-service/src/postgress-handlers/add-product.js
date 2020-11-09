@@ -15,10 +15,12 @@ const addProduct = async (event) => {
       };
     }
 
-    console.log(JSON.stringify(event, null, 2));
+    console.log(JSON.parse(event.body));
+
+    const body = JSON.parse(event.body);
 
     await client.query(`insert into products ("title", "description", "picture", "price") values
-    ('${event.title}', '${event.description}', '${event.picture}', ${event.price})`);
+    ('${body.title}', '${body.description}', '${body.picture}', ${body.price})`);
 
     return {
       statusCode: 201,
@@ -29,7 +31,7 @@ const addProduct = async (event) => {
       body: 'Success',
     };
   } catch (err) {
-    console.log(`Operation failed: ${err.message}`);
+    console.log(`Operation failed: ${err}`);
 
     return {
       statusCode: 500,
