@@ -13,7 +13,7 @@ module.exports = {
   mode: 'development',
   plugins: [
     new webpack.IgnorePlugin({
-        resourceRegExp: /^pg-native$/,
+      resourceRegExp: /^pg-native$/,
     }),
   ],
   target: 'node',
